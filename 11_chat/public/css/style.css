@@ -1,0 +1,33 @@
+.container {
+    width: 100%;
+    max-width: 1180px;
+    margin: 0 auto;
+}
+.date {
+    color: #c9c9c9;
+    font-size: 12px;
+    margin: 3px 0 0 0;
+    padding: 0;
+}
+
+.form__item {
+    margin: 0 0 5px 0;
+}
+
+.join__block {
+    margin: 5px 0;
+}
+
+
+.content {
+    display: flex;
+}
+
+.formBlock {
+    width: 80%;
+}
+
+.userlistBlock {
+    width: 20%;
+    background: yellow;
+}

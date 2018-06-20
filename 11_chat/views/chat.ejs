@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/css/style.css" type="text/css" />
+    <title>Chat</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Chat - <%=room%></h1>
+        <div class="content">
+            <div class="userlistBlock">
+                <h4>User list</h4>    
+                
+            </div>
+            
+            <div class="formBlock">
+                <form>
+                    <div class="form__item">
+                        <input class="text" type="text" name="text" placeholder="text"/>
+                    </div>
+                    <div class="form__item">
+                        <button type="submit" class="btn">Send</button>
+                        <button class="btn__location">Location</button>
+                    </div>
+                </form>
+                <ul class="list">
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <!-- MUSTSCHE SCRIPTS -->
+    <!-- ******************************************************************* -->
+    <script type="text/template" id="msgTmpl">
+        <li>
+            <b>{{name}}: </b> {{text}}
+            <p class="date">{{date}}</p> 
+        </li>
+    </script>
+    
+    
+    <script type="text/template" id="msgLocTmpl">
+        <li>
+            <b>{{name}}: </b> 
+            <a href="{{url}}" target="_blank">Location</a>
+            <p class="date">{{date}}</p> 
+        </li>
+    </script>
+    
+  
+    
+    <!-- SCRIPTS -->
+    <!-- ******************************************************************* -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"></script>
+    <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+    <script type="text/javascript" src="/js/moment.min.js"></script>
+    <script type="text/javascript" src="/js/mustache.min.js"></script>
+    <script type="text/javascript" src="/js/chat.js"></script>
+</body>
+</html>
